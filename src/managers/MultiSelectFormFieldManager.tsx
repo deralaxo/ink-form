@@ -4,10 +4,10 @@ import {
   FormFieldValueRendererProps,
   SpecificFormFieldRendererProps,
   TypeOfField,
-} from '../types';
+} from '../types.js';
 import React from 'react';
 import { Box } from 'ink';
-import SelectInput from 'ink-multi-select';
+import SelectInput from 'ink-select-input';
 
 export class MultiSelectFormFieldManager implements FormFieldManager<FormFieldMultiSelect> {
   public type: TypeOfField<FormFieldMultiSelect> = 'multiselect';
@@ -17,8 +17,6 @@ export class MultiSelectFormFieldManager implements FormFieldManager<FormFieldMu
       <SelectInput
         items={props.field.options.map(option => ({ value: option.value, label: option.label ?? option.value }))}
         onSelect={option => props.onChange([...(props.value ?? []), option.value as string])}
-        onUnselect={option => props.onChange((props.value ?? []).filter(value => value !== option.value))}
-        defaultSelected={props.field.options.filter(option => props.value?.includes(option.value))}
       />
     </Box>
   );

@@ -1,7 +1,8 @@
 {
-  "name": "ink-form",
+  "name": "@deralaxo/ink-form",
   "version": "1.0.2",
   "description": "Complex user-friendly form component for React Ink",
+  "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "keywords": [
@@ -16,17 +17,23 @@
     "commandline",
     "cmd"
   ],
-  "repository": "https://github.com/lukasbach/ink-form",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deralaxo/ink-form.git"
+  },
   "author": "Lukas Bach <lbach@outlook.de>",
   "license": "MIT",
-  "bugs": "https://github.com/lukasbach/ink-form/issues",
+  "bugs": {
+    "url": "https://github.com/deralaxo/ink-form/issues"
+  },
   "devDependencies": {
-    "@types/node": "^14.14.31",
-    "@types/react": "^17.0.2",
+    "@types/ink-text-input": "2.0.4",
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.29",
-    "typescript": "^4.2.3"
+    "typescript": "5.2.2"
   },
   "scripts": {
     "start": "ts-node src/demo/overview.tsx",
@@ -39,16 +46,16 @@
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write ."
   },
-  "peerDependencies": {
-    "ink": "^3.0.8",
-    "react": "^17.0.1"
-  },
   "dependencies": {
-    "ink": "^3.0.8",
-    "ink-multi-select": "^2.0.0",
-    "ink-quicksearch-input": "^1.0.0",
-    "ink-select-input": "^4.2.0",
-    "ink-text-input": "^4.0.1",
-    "react": "^17.0.1"
+    "ink": "4.4.1",
+    "ink-multi-select": "2.0.0",
+    "ink-quicksearch-input": "1.0.0",
+    "ink-select-input": "5.0.0",
+    "ink-text-input": "5.0.1",
+    "react": "18.2.0"
+  },
+  "homepage": "https://github.com/deralaxo/ink-form#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
