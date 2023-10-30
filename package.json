@@ -1,6 +1,6 @@
 {
   "name": "@deralaxo/ink-form",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "description": "Complex user-friendly form component for React Ink",
   "type": "module",
   "main": "lib/index.js",
@@ -36,19 +36,16 @@
     "typescript": "5.2.2"
   },
   "scripts": {
-    "start": "ts-node src/demo/overview.tsx",
-    "demo:overview": "ts-node src/demo/overview.tsx",
-    "demo:packagejson": "ts-node src/demo/packagejson.tsx",
-    "demo:custommanager": "ts-node src/demo/custommanager.tsx",
-    "demo:imperative": "ts-node src/demo/imperative.ts",
+    "start": "node ./demo/dist/demo/overview.js",
     "build": "tsc",
     "build:docs": "typedoc --out docs src/index.ts",
+    "build:demo": "tsc -p tsconfig.demo.json",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write ."
   },
   "dependencies": {
+    "@deralaxo/ink-multi-select": "1.0.223",
     "ink": "4.4.1",
-    "ink-multi-select": "2.0.0",
     "ink-quicksearch-input": "1.0.0",
     "ink-select-input": "5.0.0",
     "ink-text-input": "5.0.1",

@@ -156,7 +156,7 @@ export type FormFieldSelect = AbstractFormField<'select', string> & {
 };
 
 export type FormFieldMultiSelect = AbstractFormField<'multiselect', string[]> & {
-  options: Array<{ label?: string; value: string }>;
+  options: Array<{ label: string; value: string }>;
 };
 
 export interface FormFieldValueRendererProps<T extends FormField> {
